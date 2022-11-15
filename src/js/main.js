@@ -1,4 +1,6 @@
-console.log('I get called from main.js!');
+import {  } from "../assets/css/libs/material.min.css";
+import {  } from "../assets/css/style.css";
+import  mytest  from "./test.js";
 var app = (function() {
   var indexPage = function() {
     // Register Dialog box
@@ -120,7 +122,6 @@ var app = (function() {
         dialog.close();
       });
   };
-
   var addPage = function() {
     var id = helpers.getParameterByName('id'); // "1"
     var pageTitle = document.querySelector('#page-title');
@@ -180,13 +181,15 @@ var app = (function() {
 ///register serviceWorker
 if ("serviceWorker" in navigator) {
   window.addEventListener("load",function () {
-      navigator.serviceWorker.register("./sw.js").then(function (swRegisRes) {
+      navigator.serviceWorker.register("./sw.bundle.js").then(function (swRegisRes) {
           console.log("service worker registered.");
-      }).catch(function () {
+      }).catch(function (error) {
+        console.log(error);
           console.log("service worker error");
       })
   })
 }
+mytest()
 //// fetch data from external api and write them in indexedDB
 // fetch("notes.json")
 // .then(function (response) {

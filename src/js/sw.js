@@ -5,7 +5,7 @@ const Dynamic_Cache_Version = "dynamic4";
 ///به هیچ وجه sw.js را کش نکنید چون اگر کش بشه از داخل کش خونده میشه و به هیچ وجه اپدیت نمیشه.
 const Static_Assets = [
   "/",
-  "/add.html",
+  "dist/add.html",
   "/index.html",
   "/offline.html",
   "/assets/css/style.css",
